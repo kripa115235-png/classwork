@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background: #f3f4ff;
+    color: #1e293b;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #312e81;
+    margin-bottom: 2rem;
+}
+
+/* Search and button area */
+.toolbar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#searchInput {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.8rem;
+    border: 2px solid #c7d2fe;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: white;
+}
+
+#searchInput:focus {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+#toggleDetailsBtn {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    background: #4f46e5;
+    color: white;
+}
+
+#toggleDetailsBtn:hover {
+    background: #3730a3;
+}
+
+/* Details box */
+.hidden {
+    display: none;
+}
+
+.details-box {
+    background: #e0e7ff;
+    border-left: 6px solid #6366f1;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.details-box h2 {
+    color: #3730a3;
+}
+
+/* Course grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+
+.card {
+    padding: 1.3rem;
+    border: none;
+    border-radius: 14px;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+}
+
+.card h2 {
+    color: #4f46e5;
+    margin-top: 0;
+}
+
+.card p {
+    line-height: 1.5;
+    color: #475569;
+}
+
+/* Search result message */
+#searchStatus {
+    margin-top: 1.2rem;
+    font-weight: bold;
+    color: #4338ca;
+    text-align: center;
+}
+
+/* Name input */
+label {
+    display: block;
+    margin-top: 2rem;
+    font-weight: bold;
+    color: #312e81;
+}
+
+#nameInput {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 2px solid #c7d2fe;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: white;
+}
+
+#nameInput:focus {
+    outline: 2px solid #6366f1;
+}
+
+#charCount {
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+#trimCount {
+    font-weight: bold;
+    color: #059669;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    #searchInput {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #toggleDetailsBtn {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT College Course Search</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <main>
+        <h1>MIT College Courses</h1>
+
+        <div class="toolbar">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search BCA, CSIT... (Esc clear, Enter search)"
+            >
+
+            <button id="toggleDetailsBtn" aria-expanded="false">
+                Show Details
+            </button>
+        </div>
+
+        <div id="courseDetails" class="hidden details-box">
+            <h2>BCA Details</h2>
+            <p>
+                BCA focuses on application programming, software development,
+                databases, and computer applications.
+            </p>
+        </div>
+
+        <div id="searchGrid" class="grid">
+
+            <div class="card" data-name="BCA" data-tags="app programming">
+                <h2>BCA</h2>
+                <p>Bachelor of Computer Applications</p>
+            </div>
+
+            <div class="card" data-name="CSIT" data-tags="cs algorithms">
+                <h2>CSIT</h2>
+                <p>Computer Science and Information Technology</p>
+            </div>
+
+            <div class="card" data-name="BIT" data-tags="it networking">
+                <h2>BIT</h2>
+                <p>Bachelor of Information Technology</p>
+            </div>
+
+            <div class="card" data-name="BIM" data-tags="management">
+                <h2>BIM</h2>
+                <p>Bachelor of Information Management</p>
+            </div>
+
+        </div>
+
+        <p id="searchStatus"></p>
+
+        <label for="nameInput">Enter Your Name:</label>
+
+        <input
+            type="text"
+            id="nameInput"
+            placeholder="Type name"
+        >
+
+        <p>
+            Characters:
+            <span id="charCount">0</span>
+            |
+            Trimmed Characters:
+            <span id="trimCount">0</span>
+        </p>
+
+    </main>
+
+</body>
+</html>

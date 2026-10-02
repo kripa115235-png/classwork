@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.course-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-left-width: 6px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    background: white;
+}
+
+.bca {
+    border-left-color: #1a56db;
+}
+
+.csit {
+    border-left-color: #0e9f6e;
+}
+
+.bit {
+    border-left-color: #ea580c;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card:focus-visible {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+}
+
+.countBtn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#totalClicks {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2rem;
+}
